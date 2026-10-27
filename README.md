@@ -24,12 +24,18 @@
 &nbsp;
 <!-- About this Project -->
 # ABOUT THIS PROJECT
-Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes mood while on idle.
+Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes moods while on idle.
 
-**Developed and tested on the ESP32-C3 SuperMini**, but works on any ESP32-C3 dev board with the same GPIO wiring.
+Designed to bring wireless experimentation, security testing, and practical hardware utilities together in a compact, feature-rich platform. Combining offensive and defensive capabilities, it provides an accessible interface for exploring wireless technologies, testing security configurations, and interacting with compatible hardware in controlled environments.
 
-> **some features may violate local laws.** Use at your own discretion and risk.
+Built for enthusiasts, developers, and security researchers, Evil Mochi offers a versatile platform for exploring hardware capabilities, experimenting with wireless technologies, and understanding both offensive techniques and defensive security practices.
 
+Beyond its technical functionality, Evil Mochi incorporates a distinctive visual identity through its custom animated Mochi companion. When the device is idle, Mochi displays expressive animations and changing moods, adding personality to the firmware while giving the interface a menu full of features.
+
+> [!NOTE]
+> **Developed and tested on the ESP32-C3 SuperMini**, but works on any ESP32-C3 dev board with the same GPIO wiring.
+
+#### **Evil Mochi is intended for authorized testing, educational experimentation, and legitimate security research.** Users are responsible for ensuring that their activities comply with applicable laws and that they have permission to test the devices and networks involved.
 
 <div>&nbsp;</div>
 
@@ -57,10 +63,17 @@ Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, an
 
 <div>&nbsp;</div>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Wi Fi-880808?style=flat&logo=antenna&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Bluetooth-1F242C?style=flat&logo=antenna&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Infrared-880808?style=flat&logo=antenna&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Settings-1F242C?style=flat&logo=antenna&logoColor=white"/>
+</p>
+
 <!-- Features -->
-## 📌 Features
+## 📌 FW Features
 <details>
-<summary><strong>📡 Wi-Fi</strong></summary>
+<summary><strong>📡 WIFI</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -75,7 +88,7 @@ Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, an
 </details>
 
 <details>
-<summary><strong>🔵 Bluetooth</strong></summary>
+<summary><strong>🔵 BLUETOOTH</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -88,7 +101,7 @@ Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, an
 </details>
 
 <details>
-<summary><strong>📺 Infrared</strong></summary>
+<summary><strong>📺 INFRARED</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -98,7 +111,7 @@ Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, an
 </details>
 
 <details>
-<summary><strong>👾 Idle Mochi</strong></summary>
+<summary><strong>👾 IDLE MOCHI</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -108,7 +121,7 @@ Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, an
 </details>
 
 <details>
-<summary><strong>⚙️ Config</strong></summary>
+<summary><strong>⚙️ CONFIG</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -117,8 +130,108 @@ Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, an
 | Restart | Restart the device if you can't reach the physical RST button |
 > Brightness & Color Inversion its saved to NVS so its not lost after first restart or shut off
 
-
 </details>
 
+> [!WARNING]
+> **some features may violate local laws.** Use at your own risk.
+
+<br/>
+
+## 🛠️ Hardware Required
+- **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either C3 or C3Supermini)
+- **I2C OLED DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306 only for now) 
+- **IR LED** – Either a generic IR module or for separate LEDs setup watch my diagram below
+- **STATUS LED** – Any red,green,blue led will work properly
+- **3x BUTTONS** – Any push button its fine
+- **Resistors** (Optional)
+- **transistors** (Optional)
+
+<br/>
+
+## 🔗 Connections Pinout          
+### • I2C OLED Display  
+| OLED | ESP32C3 |
+| :--- | :--- |
+| **VCC** | 3.3V | 
+| **GND** | GND |  
+| **SDA** | GPIO 8 |  
+| **SCL** | GPIO 9 | 
+
+### • Others 
+| Component | Pin | Notes |
+| :--- | :--- | :--- |
+| **IR Led** | GPIO 4 | Follow my schematic setup below for the best results |
+| **Status LED** | GPIO 3 | Through a 150Ω resistor for (Red,Green,Blue) |
+| **Button UP** | GPIO 2 |     
+| **Button OK** | GPIO 1 |  
+| **Button DOWN** | GPIO 0 |  
+
+### • Battery (Aditional) 
+| Component | Connects to | 
+| :--- | :--- | 
+| **Battery (+)** | Switch / Leg 1 | 
+| **Switch / Leg 2** | TP4056 BAT+ |
+| **Battery (−)** | TP4056 BAT− |
+| **TP4056 OUT+** | Booster IN+ |  
+| **TP4056 OUT−** | Booster IN− |
+| **Booster OUT+ (5V)** | ESP32 5V / VIN |
+| **Booster OUT− (GND)** | ESP32 GND |
+> Neccessary only if you are gonna use custom IR setup like my diagram and not a generic IR trasmitter module.
+>
+> Set the boost converter output to 5V before connecting the ESP32.
+
+<br/>
+
+## 🚀 Installation & Flashing
+
+### What You Need
+Before you begin, make sure you have:
+*   An ESP32-C3 development board (tested on the SuperMini).
+*   A USB data cable (not just a charge-only cable).
+*   The Evil Mochi firmware `.bin` file.
+*   A compatible ESP32 flashing tool, such as [ESP FLASHER.](https://esptool.spacehuhn.com/) or [ADAFRUIT FLASHER](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/)
+*   USB drivers for your board if required (CH340 or CP2102)
+
+### Step 1: Download the Firmware
+1. Download the latest Evil Mochi release from the repository's **Releases** section.
+2. Extract the downloaded archive if necessary.
+3. Locate the firmware `.bin` file.
+
+### Step 2: Connect Your ESP32-C3
+1. Connect your ESP32-C3 to your computer using a USB data cable.
+2. Make sure again the required USB-to-serial drivers are installed.
+3. Identify the serial (COM) port assigned to your board.
+4. **If the board does not enter download mode automatically:** Hold the **BOOT** button while connecting or resetting it.
+
+### Step 3: Open the ESP32 Flasher
+1. Launch your preferred ESP32 flashing tool.
+2. Select the correct serial port.
+3. Load the firmware `.bin` file at 0x0 offset.
+4. Once flashing reaches 100%, the tool will display a success message.
+
+<br/>
+
+## 💎 Credit
+- Fully developed by **nnmexplt**.
+- One person. One vision. No limits.
+- Personal project made by me.
+- Check out my other projects on [github](https://github.com/nnmeexplt?tab=repositories) and my builds on my [tiktok](https://tiktok.com/@nnme.dev) .
+
+> *Special thanks to the open-source pentesting community for protocol research and payload inspiration.*
+
+## 📸 Contact
+- Portfolio: [nnmestore](https://nnmestore.pages.dev) 
+- Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev) 
+- Github:    [nnmeexplt](https://github.com/nnmeexplt)
+- Email:     nonametester@proton.me
+##### if you have a question related to the project dont hesitate to do it [here](https://tiktok.com/@nnme.dev) for the quickest reply.
+##### Check out my other builds/projects i've made on [here](https://tiktok.com/@nnme.dev)
+
+## Support & Contributions
+
+- 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
+- ⭐ Like the project? a star on the repo will make a big difference.
+- 🛠 Want to contribute? Fork it and submit a pull request.
+‎
 > [!WARNING]
 > This project is intended for **educational and research purposes only**. Unauthorized use may violate local laws.
