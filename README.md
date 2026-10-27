@@ -24,9 +24,11 @@
 &nbsp;
 <!-- About this Project -->
 # ABOUT THIS PROJECT
-Evil Mochi is a custom ESP32-C3(Developed on SuperMini) firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes mood while on idle.
+Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes mood while on idle.
 
-**some features may violate local laws. Use only in a controlled enviroment.**
+**Developed and tested on the ESP32-C3 SuperMini**, but works on any ESP32-C3 dev board with the same GPIO wiring.
+
+> **some features may violate local laws.** Use at your own discretion and risk.
 
 
 <div>&nbsp;</div>
@@ -58,7 +60,7 @@ Evil Mochi is a custom ESP32-C3(Developed on SuperMini) firmware made for wirele
 <!-- Features -->
 ## 📌 Features
 <details>
-<summary><strong>ᯤ Wi-Fi</strong></summary>
+<summary><strong>📡 Wi-Fi</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -73,7 +75,7 @@ Evil Mochi is a custom ESP32-C3(Developed on SuperMini) firmware made for wirele
 </details>
 
 <details>
-<summary><strong>ᛒ Bluetooth</strong></summary>
+<summary><strong>🔵 Bluetooth</strong></summary>
   
 | Tool | Description |
 |------|-------------|
@@ -86,17 +88,37 @@ Evil Mochi is a custom ESP32-C3(Developed on SuperMini) firmware made for wirele
 </details>
 
 <details>
-<summary><strong>⏻ InfraRed</strong></summary>
+<summary><strong>📺 Infrared</strong></summary>
   
 | Tool | Description |
 |------|-------------|
-| BLE Scan | Lists nearby BLE devices, names, and RSSI. |
-| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs (probably the most optimized for esp32c3 around) |
-| Android Spam | Broadcasts FastPair payloads with random MACs |
+| TVBGONE | Turn off any TV, Features 140 EU and 137 NA codes with a custom power icon fill animation |
+> More coming soon                                                        
 
 </details>
 
-⏻
+<details>
+<summary><strong>👾 Idle Mochi</strong></summary>
+  
+| Tool | Description |
+|------|-------------|
+| Idle Mochi | Gets you back to mochi standby |
+> After 45-seconds its enters automatically to mochi standby 
+
+</details>
+
+<details>
+<summary><strong>⚙️ Config</strong></summary>
+  
+| Tool | Description |
+|------|-------------|
+| LED Brightness | Configure how bright you want your led indicator from 0 to 100% |
+| Invert Colors | Inverts the colors displayed on the screen, turning each color into its opposite |
+| Restart | Restart the device if you can't reach the physical RST button |
+> Brightness & Color Inversion its saved to NVS so its not lost after first restart or shut off
+
+
+</details>
 
 > [!WARNING]
 > This project is intended for **educational and research purposes only**. Unauthorized use may violate local laws.
