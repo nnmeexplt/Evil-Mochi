@@ -22,14 +22,17 @@
 </div>
 
 &nbsp;
-
 <!-- About this Project -->
 # ABOUT THIS PROJECT
-Evil Mochi is a compact, multi-functional wireless device that blends offensive and defensive capabilities with a playful personality. Powered by the ESP32-C3, it combines Wi-Fi, Bluetooth, and IR functionality in one versatile platform, brought to life in a simple by an animated mochi standby companion on a 0.96-inch display. Packed with wireless potential, Evil Mochi turns powerful functionality into a pocket-sized experience.
+Evil Mochi is a custom ESP32-C3(Developed on SuperMini) firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes mood while on idle.
 
-**Unauthorized use may violate local laws. Use only in a controlled enviroment**
+**some features may violate local laws. Use only in a controlled enviroment.**
 
-## MOCHI STANDBY REFERENCE
+
+<div>&nbsp;</div>
+
+
+<div>&nbsp;</div>
 
 <table align="center">
   <tr>
@@ -51,6 +54,49 @@ Evil Mochi is a compact, multi-functional wireless device that blends offensive 
 </table>
 
 <div>&nbsp;</div>
+
+<!-- Features -->
+## 📌 Features
+<details>
+<summary><strong>ᯤ Wi-Fi</strong></summary>
+  
+| Tool | Description |
+|------|-------------|
+| Wi-Fi Scan | Full AP scan with SSID, BSSID, RSSI, and Channel |
+| Deauth Attacks | Deauth Flood (targets all scanned APs) and Deauth Select (pick one target) |
+| Captive Portal | Default "Free WiFi" portal and Evil Twin that logs captured credentials to the screen |
+| Station Sniffer | Captures probe requests and data frames to see nearby phones/clients |
+| Beacon Spam | floods the surrounding area with fake SSIDs |
+| Packet Analyzer | Real-time live graph across all 16 channels |
+| Guardian | Monitors for Wi-Fi attacks (Deauth floods, Beacon floods, Probe floods) and alerts you in real time |
+
+</details>
+
+<details>
+<summary><strong>ᛒ Bluetooth</strong></summary>
+  
+| Tool | Description |
+|------|-------------|
+| BLE Scan | Lists nearby BLE devices, names, and RSSI. |
+| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs (probably the most optimized for esp32c3 around) |
+| Android Spam | Broadcasts FastPair payloads with random MACs |
+| Bad BLE | HID emulation for injecting keystrokes over Bluetooth Low Energy |
+| BLE Radar | Tracks nearby BLE devices and shows device name, MAC address, RSSI, visual proximity meter, and total times seen |
+
+</details>
+
+<details>
+<summary><strong>⏻ InfraRed</strong></summary>
+  
+| Tool | Description |
+|------|-------------|
+| BLE Scan | Lists nearby BLE devices, names, and RSSI. |
+| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs (probably the most optimized for esp32c3 around) |
+| Android Spam | Broadcasts FastPair payloads with random MACs |
+
+</details>
+
+⏻
 
 > [!WARNING]
 > This project is intended for **educational and research purposes only**. Unauthorized use may violate local laws.
