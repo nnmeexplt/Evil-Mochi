@@ -35,11 +35,6 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 > [!NOTE]
 > **Developed and tested on the ESP32-C3 SuperMini**, but works on any ESP32-C3 dev board with the same GPIO wiring.
 
-#### **Evil Mochi is intended for authorized testing, educational experimentation, and legitimate security research.** Users are responsible for ensuring that their activities comply with applicable laws and that they have permission to test the devices and networks involved.
-
-<div>&nbsp;</div>
-
-
 <div>&nbsp;</div>
 
 <table align="center">
@@ -69,8 +64,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
     <img src="https://img.shields.io/badge/Infrared-880808?style=flat&logo=antenna&logoColor=white"/>
 </p>
 
-<!-- Features -->
-## 📌 FW Features
+## 📌 Features & Functionality
 <details>
 <summary><strong>📡 WIFI</strong></summary>
   
@@ -148,7 +142,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 ## 🛠️ Hardware Required
 - **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either C3 dev board or supermini will work)
 - **DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306)
-- **IR LED** – Either a generic IR module or separate IR LEDs wired according to the schematic schematic below
+- **IR LED Trasmitter** – Either a generic IR trasmitter module or separate IR LEDs wired according to the schematic schematic below
 - **STATUS LED + 1x150Ω resistor** – Any red,green,blue led will work properly
 - **Resistors 3x10Ω/1x150Ω** – (Optional, needed only if you are following my IR schematic)
 - **transistors 1x NPN BJT** – (Optional, needed only if you are following my IR schematic)
@@ -166,8 +160,8 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 <br/>
 
 ## 🔗 Connections Pinout          
-### • I2C OLED Display  
-| OLED | ESP32C3 |
+### • DISPLAY
+| Component | Pin |
 | :--- | :--- |
 | **VCC** | 3.3V | 
 | **GND** | GND |  
@@ -177,19 +171,14 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 ### • Others 
 | Component | Pin |
 | :--- | :--- | 
-| **IR Led** | GPIO 4 | 
+| **IR LED** | GPIO 4 | 
 | **Status LED** | GPIO 3 Through a 150Ω resistor |
 | **Button UP** | GPIO 2 |     
 | **Button OK** | GPIO 1 |  
 | **Button DOWN** | GPIO 0 |  
 
-> [!TIP]
-> **If you are using a generic IR module connect data to gpio 4 directly.**
-> 
-> **If not and you are using a custom IR setup follow my diagram below for best results.**
-
 ### • Battery (Aditional) 
-> **Set the boost converter output to 5V before connecting the ESP32.**
+**Set the boost converter output to 5V before connecting the ESP32.**
 
 | Component | Connects to | 
 | :--- | :--- | 
@@ -201,14 +190,12 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **Booster OUT+ (5V)** | ESP32 5V / VIN |
 | **Booster OUT− (GND)** | ESP32 GND |
 
-> [!TIP]
-> Neccessary only if you are gonna use custom IR setup like my diagram and not a generic IR trasmitter module.
+**Neccessary only if you are gonna use custom IR setup like my schematic and not a generic IR trasmitter module.**
 
 
 <img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
 
-<br/>
-<br/>
+> In my build schematic i used exactly these components:  **ESP32C3Supermini, OLED 0.96" Display 128x64, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs),  5x Resistors (150ohms/10ohms), 1x 2n2222 Transistor and Li Po Battery 3.7v plus TP4056+Booster module.**
 
 ## 🚀 Installation & Flashing
 
