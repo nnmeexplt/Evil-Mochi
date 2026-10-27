@@ -9,7 +9,7 @@
   <p align="center">
     <a href="https://github.com/nnmeexplt/evil-mochi"><img src="https://img.shields.io/static/v1?label=nnmeexplt&message=Evil-Mochi&color=880808&logo=github"/></a>
     <a href="https://github.com/nnmeexplt"><img src="https://img.shields.io/badge/Profile-333333?logo=refinedgithub&logoColor=black"/></a>
-    <img src="https://img.shields.io/badge/ESP32-Offensive%20%2B%20Defensive-880808?logo=espressif"/>
+    <img src="https://img.shields.io/badge/ESP32C3-Offensive%20%2B%20Defensive-880808?logo=espressif"/>
     <img src="https://img.shields.io/badge/License-333333"/>
   </p>
 
@@ -132,19 +132,19 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 </details>
 
-> [!WARNING]
+> [!CAUTION]
 > **some features may violate local laws.** Use at your own risk.
 
 <br/>
 
 ## 🛠️ Hardware Required
-- **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either C3 or C3Supermini)
-- **I2C OLED DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306 only for now) 
-- **IR LED** – Either a generic IR module or for separate LEDs setup watch my diagram below
+- **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either dev board or supermini will work)
+- **I2C OLED DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306) 
+- **IR LED** – Either a generic IR module or separate IR LEDs wired according to the schematic diagram below
 - **STATUS LED** – Any red,green,blue led will work properly
 - **3x BUTTONS** – Any push button its fine
-- **Resistors** (Optional)
-- **transistors** (Optional)
+- **Resistors 3x10Ω/1x150Ω** (Optional, needed only if you are following my diagram)
+- **transistors 1x NPN BJT** (Optional, needed only if you are following my diagram)
 
 <br/>
 
@@ -158,13 +158,20 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **SCL** | GPIO 9 | 
 
 ### • Others 
-| Component | Pin | Notes |
-| :--- | :--- | :--- |
-| **IR Led** | GPIO 4 | Follow my schematic setup below for the best results |
-| **Status LED** | GPIO 3 | Through a 150Ω resistor for (Red,Green,Blue) |
+| Component | Pin |
+| :--- | :--- | 
+| **IR Led** | GPIO 4 | 
+| **Status LED** | GPIO 3 Through a 150Ω resistor |
 | **Button UP** | GPIO 2 |     
 | **Button OK** | GPIO 1 |  
 | **Button DOWN** | GPIO 0 |  
+
+> [!TIP]
+> **If you are using a generic IR module connect data to gpio 4 directly.**
+> 
+> **If not and you are using a custom IR setup follow my diagram below for best results.**
+
+<br/>
 
 ### • Battery (Aditional) 
 | Component | Connects to | 
@@ -232,6 +239,8 @@ Before you begin, make sure you have:
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
 - 🛠 Want to contribute? Fork it and submit a pull request.
+
 ‎
+
 > [!WARNING]
 > This project is intended for **educational and research purposes only**. Unauthorized use may violate local laws.
