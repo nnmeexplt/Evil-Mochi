@@ -191,9 +191,10 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **Booster OUT− (GND)** | ESP32 GND |
 > [!TIP]
 > Neccessary only if you are gonna use custom IR setup like my diagram and not a generic IR trasmitter module.
->
-> Set the boost converter output to 5V before connecting the ESP32.
->
+
+> **Set the boost converter output to 5V before connecting the ESP32.**
+
+> [!CAUTION]
 > If you are gonna charge a battery under 1kmAh please make sure to change the resistor with the appropiate value.
 
 <img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
@@ -207,11 +208,11 @@ Before you begin, make sure you have:
 *   An ESP32-C3 development board (tested on the SuperMini).
 *   A USB data cable (not just a charge-only cable).
 *   The Evil Mochi firmware `.bin` file.
-*   A compatible ESP32 flashing tool, such as [ESP FLASHER.](https://esptool.spacehuhn.com/) or [ADAFRUIT FLASHER](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/)
+*   A compatible ESP32 flashing tool, such as [ESP Flasher.](https://esptool.spacehuhn.com/) or [Adafruit Flasher](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/)
 *   USB drivers for your board if required (CH340 or CP2102)
 
 ### Step 1: Download the Firmware
-1. Download the latest Evil Mochi release from the repository's **Releases** section.
+1. Download the latest Evil Mochi release from the repository's **Releases** section or install the zip file directly.
 2. Extract the downloaded archive if necessary.
 3. Locate the firmware `.bin` file.
 
