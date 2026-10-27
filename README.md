@@ -249,7 +249,6 @@ Before you begin, make sure you have:
 
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
-- 🛠 Want to contribute? Fork it and submit a pull request.
 - 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
 
 > ⚠️ This project is intended for **educational and research purposes only.** Users are fully responsible for any misuse of this firmware.
