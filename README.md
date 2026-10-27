@@ -97,6 +97,13 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Bad BLE | HID emulation for injecting keystrokes over Bluetooth Low Energy |
 | BLE Radar | Tracks nearby BLE devices and shows device name, MAC address, RSSI, visual proximity meter, and total times seen |
 
+
+> **BLE Radar Distance**
+> - **Nearby** → 0–3 m
+> - **Moderate** → 3–8 m
+> - **Very Far** → 10–30 m
+> - **Extreme** → unkonwn 
+
 </details>
 
 <details>
@@ -115,7 +122,9 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Tool | Description |
 |------|-------------|
 | Idle Mochi | Gets you back to mochi standby |
-> After 45-seconds its enters automatically to mochi standby 
+> **After 45-seconds its enters automatically to mochi standby**
+> 
+> ***More features, styles and animations will come soon***
 
 </details>
 
@@ -137,20 +146,20 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 <br/>
 
 ## 🛠️ Hardware Required
-- **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either dev board or supermini will work)
-- **I2C OLED DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306) 
-- **IR LED + 1x150Ω resistor** – Either a generic IR module or separate IR LEDs wired according to the schematic diagram below
-- **STATUS LED** – Any red,green,blue led will work properly
-- **3x BUTTONS** – Any push button its good
-- **Resistors 3x10Ω/1x150Ω** – (Optional, needed only if you are following my IR diagram)
-- **transistors 1x NPN BJT** – (Optional, needed only if you are following my IR diagram)
+- **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either C3 dev board or supermini will work)
+- **DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306)
+- **IR LED** – Either a generic IR module or separate IR LEDs wired according to the schematic schematic below
+- **STATUS LED + 1x150Ω resistor** – Any red,green,blue led will work properly
+- **Resistors 3x10Ω/1x150Ω** – (Optional, needed only if you are following my IR schematic)
+- **transistors 1x NPN BJT** – (Optional, needed only if you are following my IR schematic)
+- - **3x BUTTONS** – Any push button will do the job
 >
-> Battery components (not neccessarily unless you are following my IR diagram or you just want it with it).
+> Battery Components (Not neccessarily unless you are following my IR diagram or you simply want it)
 > 
 - **Li Po 3.7V Battery** – Over 1k mAh if you dont want to change the resistor from the tp4056
 - **TP4056** – Make sure you get the charging module with battery protection which has 6 pads
 - **MT3608** – DC-DC Step-Up (Boost) Converter
-#### Or else get a single module featuring both. Like in my diagram below for reference.
+- #### Alternatively, use a single module that integrates both as shown in my schematic below.
 > [!WARNING]
 > If you are gonna charge a battery under 1kmAh please make sure to change the resistor with the appropiate value.
 
@@ -199,6 +208,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 <img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
 
 <br/>
+<br/>
 
 ## 🚀 Installation & Flashing
 
@@ -226,26 +236,23 @@ Before you begin, make sure you have:
 2. Select the correct serial port.
 3. Load the firmware `.bin` file at 0x0 offset.
 4. Once flashing reaches 100%, the tool will display a success message.
-
-<br/>
+5. `Ready to go and play`
 
 ## 💎 Credit
-- Fully developed by **nnmexplt**.
-- One person. One vision. No limits.
-- Personal project made by me.
-- Check out my other projects on [github](https://github.com/nnmeexplt?tab=repositories) and my builds on my [tiktok](https://tiktok.com/@nnme.dev) .
+- Fully developed and maintained by **me**.
+- Check out my other projects on my [github](https://github.com/nnmeexplt?tab=repositories)
 
-> *Special thanks to the open-source pentesting community for protocol research and payload inspiration.*
+**Special thanks to the open-source pentesting community for protocol research and payload inspiration.**
 
-## 📸 Contact
+## 📩 Contact
 - Portfolio: [nnmestore](https://nnmestore.pages.dev) 
 - Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev) 
 - Github:    [nnmeexplt](https://github.com/nnmeexplt)
 - Email:     nonametester@proton.me
-##### if you have a question related to the project dont hesitate to do it [here](https://tiktok.com/@nnme.dev) for the quickest reply.
-##### Check out my other builds/projects i've made on [here](https://tiktok.com/@nnme.dev)
+##### If you have any questions regarding the project, feel free to share them on [here](https://tiktok.com/@nnme.dev) 
+##### Check out my videos of the builds and projects i've made over the time on [here](https://tiktok.com/@nnme.dev) 
 
-## Support & Contributions
+## 🌟 Support 
 
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
