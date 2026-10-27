@@ -132,19 +132,27 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 </details>
 
-> [!CAUTION]
-> **some features may violate local laws.** Use at your own risk.
+> **Some features may violate local laws.** Use at your own risk.
 
 <br/>
 
 ## 🛠️ Hardware Required
 - **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either dev board or supermini will work)
 - **I2C OLED DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306) 
-- **IR LED** – Either a generic IR module or separate IR LEDs wired according to the schematic diagram below
+- **IR LED + 1x150Ω resistor** – Either a generic IR module or separate IR LEDs wired according to the schematic diagram below
 - **STATUS LED** – Any red,green,blue led will work properly
-- **3x BUTTONS** – Any push button its fine
-- **Resistors 3x10Ω/1x150Ω** (Optional, needed only if you are following my diagram)
-- **transistors 1x NPN BJT** (Optional, needed only if you are following my diagram)
+- **3x BUTTONS** – Any push button its good
+- **Resistors 3x10Ω/1x150Ω** – (Optional, needed only if you are following my IR diagram)
+- **transistors 1x NPN BJT** – (Optional, needed only if you are following my IR diagram)
+>
+> Battery components (not neccessarily unless you are following my IR diagram or want a battery).
+> 
+- **Li Po 3.7V Battery** – Over 1k mAh if you dont want to change the resistor from the tp4056
+- **TP4056** – Make sure you get the charging module with battery protection which has 6 pads
+- **MT3608** – DC-DC Step-Up (Boost) Converter
+#### Or else get a single module featuring both. Like in my diagram below for reference.
+> [!WARNING]
+> If you are gonna charge a battery under 1kmAh please make sure to change the resistor with the appropiate value.
 
 <br/>
 
@@ -171,8 +179,6 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 > 
 > **If not and you are using a custom IR setup follow my diagram below for best results.**
 
-<br/>
-
 ### • Battery (Aditional) 
 | Component | Connects to | 
 | :--- | :--- | 
@@ -183,9 +189,14 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **TP4056 OUT−** | Booster IN− |
 | **Booster OUT+ (5V)** | ESP32 5V / VIN |
 | **Booster OUT− (GND)** | ESP32 GND |
+> [!TIP]
 > Neccessary only if you are gonna use custom IR setup like my diagram and not a generic IR trasmitter module.
 >
 > Set the boost converter output to 5V before connecting the ESP32.
+>
+> If you are gonna charge a battery under 1kmAh please make sure to change the resistor with the appropiate value.
+
+<img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
 
 <br/>
 
@@ -239,8 +250,9 @@ Before you begin, make sure you have:
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
 - 🛠 Want to contribute? Fork it and submit a pull request.
+- 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
 
 ‎
 
-> [!WARNING]
+> [!CAUTION]
 > This project is intended for **educational and research purposes only**. Unauthorized use may violate local laws.
