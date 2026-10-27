@@ -65,9 +65,8 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 <p align="center">
     <img src="https://img.shields.io/badge/Wi Fi-880808?style=flat&logo=antenna&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Bluetooth-1F242C?style=flat&logo=antenna&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Bluetooth-880808?style=flat&logo=antenna&logoColor=white"/>
     <img src="https://img.shields.io/badge/Infrared-880808?style=flat&logo=antenna&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Settings-1F242C?style=flat&logo=antenna&logoColor=white"/>
 </p>
 
 <!-- Features -->
@@ -128,10 +127,11 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | LED Brightness | Configure how bright you want your led indicator from 0 to 100% |
 | Invert Colors | Inverts the colors displayed on the screen, turning each color into its opposite |
 | Restart | Restart the device if you can't reach the physical RST button |
-> Brightness & Color Inversion its saved to NVS so its not lost after first restart or shut off
+> Brightness & Color Inversion its saved to NVS so its not lost after first restart.
 
 </details>
 
+> [!CAUTION]
 > **Some features may violate local laws.** Use at your own risk.
 
 <br/>
@@ -145,7 +145,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 - **Resistors 3x10Ω/1x150Ω** – (Optional, needed only if you are following my IR diagram)
 - **transistors 1x NPN BJT** – (Optional, needed only if you are following my IR diagram)
 >
-> Battery components (not neccessarily unless you are following my IR diagram or want a battery).
+> Battery components (not neccessarily unless you are following my IR diagram or you just want it with it).
 > 
 - **Li Po 3.7V Battery** – Over 1k mAh if you dont want to change the resistor from the tp4056
 - **TP4056** – Make sure you get the charging module with battery protection which has 6 pads
@@ -180,6 +180,8 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 > **If not and you are using a custom IR setup follow my diagram below for best results.**
 
 ### • Battery (Aditional) 
+> **Set the boost converter output to 5V before connecting the ESP32.**
+
 | Component | Connects to | 
 | :--- | :--- | 
 | **Battery (+)** | Switch / Leg 1 | 
@@ -189,13 +191,10 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **TP4056 OUT−** | Booster IN− |
 | **Booster OUT+ (5V)** | ESP32 5V / VIN |
 | **Booster OUT− (GND)** | ESP32 GND |
+
 > [!TIP]
 > Neccessary only if you are gonna use custom IR setup like my diagram and not a generic IR trasmitter module.
 
-> **Set the boost converter output to 5V before connecting the ESP32.**
-
-> [!CAUTION]
-> If you are gonna charge a battery under 1kmAh please make sure to change the resistor with the appropiate value.
 
 <img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
 
@@ -253,7 +252,4 @@ Before you begin, make sure you have:
 - 🛠 Want to contribute? Fork it and submit a pull request.
 - 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
 
-‎
-
-> [!CAUTION]
-> This project is intended for **educational and research purposes only**. Unauthorized use may violate local laws.
+> ⚠️ This project is intended for **educational and research purposes only.** Users are fully responsible for any misuse of this firmware.
