@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="795" height="247" alt="bannernice" src="https://github.com/user-attachments/assets/4f0e6567-c721-4cde-9e40-fc6ed92c7c7a" />
+<img width="795" height="247" alt="bannerCOMPsmaller" src="https://github.com/user-attachments/assets/4199a5ce-fa7b-4a9b-b2b2-95d3a7d91e22" />
 
 
   <br/>
@@ -10,7 +10,6 @@
     <a href="https://github.com/nnmeexplt/evil-mochi"><img src="https://img.shields.io/static/v1?label=nnmeexplt&message=Evil-Mochi&color=880808&logo=github"/></a>
     <a href="https://github.com/nnmeexplt"><img src="https://img.shields.io/badge/Profile-333333?logo=refinedgithub&logoColor=black"/></a>
     <img src="https://img.shields.io/badge/ESP32C3-Offensive%20%2B%20Defensive-880808?logo=espressif"/>
-    <img src="https://img.shields.io/badge/License-333333"/>
   </p>
 
   <p align="center">
@@ -134,10 +133,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 </details>
 
-> [!CAUTION]
-> **Some features may violate local laws.** Use at your own risk.
-
-<br/>
+##### Some features may violate local laws. Use at your own risk.
 
 ## 🛠️ Hardware Required
 - **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either C3 dev board or supermini will work)
@@ -151,6 +147,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 > Battery Components (Not neccessarily unless you are following my IR diagram or you simply want it)
 > 
 - **Li Po 3.7V Battery** – Over 1k mAh if you dont want to change the resistor from the tp4056
+- **SWITCH** – Any on/off switch will work
 - **TP4056** – Make sure you get the charging module with battery protection which has 6 pads
 - **MT3608** – DC-DC Step-Up (Boost) Converter
 - #### Alternatively, use a single module that integrates both as shown in my schematic below.
@@ -195,7 +192,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 <img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
 
-> In my build schematic i used exactly these components:  **ESP32C3Supermini, OLED 0.96" Display 128x64, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs),  5x Resistors (150ohms/10ohms), 1x 2n2222 Transistor and Li Po Battery 3.7v plus TP4056+Booster module.**
+> In my build schematic i used exactly these components:  **ESP32C3Supermini, OLED 0.96" Display 128x64, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs),  5x Resistors (150ohms/10ohms), 1x 2n2222 Transistor, 1x on/off switch and a Li Po Battery 3.7v plus TP4056+Booster module.**
 
 ## 🚀 Installation & Flashing
 
