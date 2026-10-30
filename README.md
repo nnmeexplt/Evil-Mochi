@@ -124,7 +124,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 <details>
 <summary><strong>🕹️ GAMES</strong></summary>
   
-| GAMES |  |
+| Games | Description |
 |------|-------------|
 | Snake | (G)old school nokia game |
 | Flappy Bird | that stupid ass flying bird |
