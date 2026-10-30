@@ -122,6 +122,19 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 </details>
 
 <details>
+<summary><strong>🕹️ GAMES</strong></summary>
+  
+| GAMES |  |
+|------|-------------|
+| Snake | (G)old school nokia game |
+| Flappy Bird | that stupid ass flying bird |
+| Dino | classic chrome dino game (I tried my best) |
+| Lane Racer | endless lane dodging game, gets faster the longer you drive |
+
+</details>
+
+
+<details>
 <summary><strong>⚙️ CONFIG</strong></summary>
   
 | Tool | Description |
