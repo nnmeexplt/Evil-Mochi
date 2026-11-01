@@ -23,7 +23,7 @@
 &nbsp;
 <!-- About this Project -->
 # ABOUT THIS PROJECT
-Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes moods while on idle.
+Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality along with some games, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes moods while on idle.
 
 Designed to bring wireless experimentation, security testing, and practical hardware utilities together in a compact, feature-rich platform. Combining offensive and defensive capabilities, it provides an accessible interface for exploring wireless technologies, testing security configurations, and interacting with compatible hardware in controlled environments.
 
@@ -61,6 +61,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
     <img src="https://img.shields.io/badge/Wi Fi-880808?style=flat&logo=antenna&logoColor=white"/>
     <img src="https://img.shields.io/badge/Bluetooth-880808?style=flat&logo=antenna&logoColor=white"/>
     <img src="https://img.shields.io/badge/Infrared-880808?style=flat&logo=antenna&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Games-880808?style=flat&logo=antenna&logoColor=white"/>
 </p>
 
 ## 📌 Features & Functionality
@@ -129,7 +130,8 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Snake | (G)old school nokia game |
 | Flappy Bird | that stupid ass flying bird |
 | Dino | classic chrome dino game (I tried my best) |
-| Lane Racer | endless lane dodging game, gets faster the longer you drive |
+| CarJack | endless lane dodging game, gets faster the longer you drive |
+| BBreaker | brick breaker game, pure arcade nostalgia |
 
 </details>
 
