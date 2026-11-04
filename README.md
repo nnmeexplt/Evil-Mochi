@@ -85,7 +85,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
   
 | Tool | Description |
 |------|-------------|
-| BLE Scan | Lists nearby BLE devices, names, and RSSI. |
+| BLE Scan | Lists nearby BLE devices, names, and RSSI |
 | Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs (probably the most optimized for esp32c3 around) |
 | Android Spam | Broadcasts FastPair payloads with random MACs |
 | Bad BLE | HID emulation for injecting keystrokes over Bluetooth Low Energy |
@@ -116,9 +116,9 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Tool | Description |
 |------|-------------|
 | Idle Mochi | Gets you back to mochi standby |
-> **After 45-seconds its enters automatically to mochi standby**
-> 
-> ***More features, styles and animations will come soon***
+> **After 45-seconds its enters automatically to idle Mochi anyway**
+
+> ***More features, styles and settings will come soon***
 
 </details>
 
@@ -128,7 +128,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Games | Description |
 |------|-------------|
 | Snake | (G)old school nokia game |
-| Flappy Bird | that stupid ass flying bird |
+| Flappy | that stupid ass flying bird |
 | Dino | classic chrome dino game (I tried my best) |
 | CarJack | endless lane dodging game, gets faster the longer you drive |
 | BBreaker | brick breaker game, pure arcade nostalgia |
@@ -141,14 +141,15 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
   
 | Tool | Description |
 |------|-------------|
-| LED Brightness | Configure how bright you want your led indicator from 0 to 100% |
+| LED Status | Configure how bright you want your led indicator from 0 to 100% |
 | Invert Colors | Inverts the colors displayed on the screen, turning each color into its opposite |
+| Brightness | Adjusts how bright or dim your want your screen to appear |
 | Restart | Restart the device if you can't reach the physical RST button |
-> Brightness & Color Inversion its saved to NVS so its not lost after first restart.
+> Everything is saved to NVS so its not lost after a restart.
 
 </details>
 
-##### Some features may violate local laws. Use at your own risk.
+##### ⚠️ Some features may violate local laws. Use at your own risk.
 
 ## 🛠️ Hardware Required
 - **ESP32-C3** – Main microcontroller with Wi-Fi and Bluetooth (Either C3 dev board or supermini will work)
@@ -207,13 +208,13 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 <img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
 
-> In my build schematic i used exactly these components:  **ESP32C3Supermini, OLED 0.96" Display 128x64, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs),  5x Resistors (150ohms/10ohms), 1x 2n2222 Transistor, 1x on/off switch and a Li Po Battery 3.7v plus TP4056+Booster module.**
+> **Components Used:** ESP32C3SuperMini, OLED 0.96" Display 128x64 ssd1306, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs), 5x Resistors (2x150Ω/3x10Ω), 1x 2n2222 Transistor, 1x on/off switch, 1x Status LED and a 3.7v Li Po Battery + TP4056+Booster module
 
 ## 🚀 Installation & Flashing
 
 ### What You Need
 Before you begin, make sure you have:
-*   An ESP32-C3 development board (tested on the SuperMini).
+*   An ESP32-C3 development board (developed on SuperMini).
 *   A USB data cable (not just a charge-only cable).
 *   The Evil Mochi firmware `.bin` file.
 *   A compatible ESP32 flashing tool, such as [ESP Flasher.](https://esptool.spacehuhn.com/) or [Adafruit Flasher](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/)
@@ -237,17 +238,12 @@ Before you begin, make sure you have:
 4. Once flashing reaches 100%, the tool will display a success message.
 5. `Ready to go and play`
 
-## 💎 Credit
-- Fully developed and maintained by **me**.
-- Check out my other projects on my [github](https://github.com/nnmeexplt?tab=repositories)
-
-**Special thanks to the open-source pentesting community for protocol research and payload inspiration.**
-
 ## 📩 Contact
 - Portfolio: [nnmestore](https://nnmestore.pages.dev) 
 - Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev) 
 - Github:    [nnmeexplt](https://github.com/nnmeexplt)
 - Email:     nonametester@proton.me
+- paypal.me/nnmedev
 ##### If you have any questions regarding the project, feel free to share them on [here](https://tiktok.com/@nnme.dev) 
 ##### Check out my videos of the builds and projects i've made over the time on [here](https://tiktok.com/@nnme.dev) 
 
@@ -257,4 +253,6 @@ Before you begin, make sure you have:
 - ⭐ Like the project? a star on the repo will make a big difference.
 - 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
 
-> ⚠️ This project is intended for **educational and research purposes only.** Users are fully responsible for any misuse of this firmware.
+**Special thanks to the open-source pentesting community for protocol research and payload inspiration.**
+
+> This project is intended for **educational and research purposes only.** Users are fully responsible for any misuse.
