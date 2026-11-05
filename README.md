@@ -87,8 +87,8 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 |------|-------------|
 | BLE Scan | Lists nearby BLE devices, names, and RSSI |
 | Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs (probably the most optimized for esp32c3 around) |
-| Android Spam | Broadcasts FastPair payloads with random MACs |
-| Bad BLE | HID emulation for injecting keystrokes over Bluetooth Low Energy |
+| Android Spam | Broadcasts FastPair payloads displaying unwanted pairing requests or action modals |
+| Bad BLE | 20 Highly optimized payloads for Android and Windows ( + you can change pairing beacon name as well) |
 | BLE Radar | Tracks nearby BLE devices and shows device name, MAC address, RSSI, visual proximity meter, and total times seen |
 
 
@@ -118,7 +118,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Idle Mochi | Gets you back to mochi standby |
 > **After 45-seconds its enters automatically to idle Mochi anyway**
 
-> ***More features, styles and settings will come soon***
+> ***More features, styles and settings coming soon***
 
 </details>
 
@@ -144,7 +144,9 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | LED Status | Configure how bright you want your led indicator from 0 to 100% |
 | Invert Colors | Inverts the colors displayed on the screen, turning each color into its opposite |
 | Brightness | Adjusts how bright or dim your want your screen to appear |
+| Temperature | Shows live the ESP's temperature in °C and °F |
 | Restart | Restart the device if you can't reach the physical RST button |
+| Wipe Data | Completely wipes data saved to NVS partition like settings,scores,etc |
 > Everything is saved to NVS so its not lost after a restart.
 
 </details>
