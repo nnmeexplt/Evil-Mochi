@@ -86,11 +86,10 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Tool | Description |
 |------|-------------|
 | BLE Scan | Lists nearby BLE devices, names, and RSSI |
-| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs (probably the most optimized for esp32c3 around) |
+| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs ( probably the most optimized for esp32c3 around ) |
 | Android Spam | Broadcasts FastPair payloads displaying unwanted pairing requests or action modals |
-| Bad BLE | 20 Highly optimized payloads for Android and Windows ( + you can change pairing beacon name as well) |
+| Bad BLE | 20 Highly optimized payloads for Android and Windows ( + you can change pairing beacon name as well ) |
 | BLE Radar | Tracks nearby BLE devices and shows device name, MAC address, RSSI, visual proximity meter, and total times seen |
-
 
 > **BLE Radar Distance**
 > - **Nearby** → 0–3 m
@@ -214,31 +213,20 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 ## 🚀 Installation & Flashing
 
-### What You Need
-Before you begin, make sure you have:
-*   An ESP32-C3 development board (developed on SuperMini).
-*   A USB data cable (not just a charge-only cable).
-*   The Evil Mochi firmware `.bin` file.
-*   A compatible ESP32 flashing tool, such as [ESP Flasher.](https://esptool.spacehuhn.com/) or [Adafruit Flasher](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/)
-*   USB drivers for your board if required (CH340 or CP2102)
+### Via My Web Flasher (Easy)
 
-### Step 1: Download the Firmware
-1. Download the latest Evil Mochi release from the repository's **Releases** section or install the zip file directly.
-2. Extract the downloaded archive if necessary.
-3. Locate the firmware `.bin` file.
+<div style="border: 1px solid #30363d; border-radius: 8px; padding: 12px; display: inline-block; background-color: #0d1117;">
+  <img src="https://github.com/user-attachments/assets/77a5a177-5a65-4149-86eb-2623d20a80a6" width="700" alt="Evil-Mochi Flasher" style="border-radius: 4px; display: block;">
+</div>
 
-### Step 2: Connect Your ESP32-C3
-1. Connect your ESP32-C3 to your computer using a USB data cable.
-2. Make sure again the required USB-to-serial drivers are installed.
-3. Identify the serial (COM) port assigned to your board.
-4. **If the board does not enter download mode automatically:** Hold the **BOOT** button while connecting or resetting it.
+**I've created a webflasher to make it super easy for you to flash my firmware**
+- Just Visit **[Evil-Mochi Flasher](https://evilmochiflasher.pages.dev)** and flash, thats it.
 
-### Step 3: Open the ESP32 Flasher
-1. Launch your preferred ESP32 flashing tool.
-2. Select the correct serial port.
-3. Load the firmware `.bin` file at 0x0 offset.
-4. Once flashing reaches 100%, the tool will display a success message.
-5. `Ready to go and play`
+### Flashing via binary files
+- Download the firmware `.bin` file available on this repository.
+- Use any flasher of your choice
+- Upload at 0x0 and flash
+- Thats it, good luck. Have fun.
 
 ## 📩 Contact
 - Portfolio: [nnmestore](https://nnmestore.pages.dev) 
@@ -246,14 +234,12 @@ Before you begin, make sure you have:
 - Github:    [nnmeexplt](https://github.com/nnmeexplt)
 - Email:     nonametester@proton.me
 - paypal.me/nnmedev
-##### If you have any questions regarding the project, feel free to share them on [here](https://tiktok.com/@nnme.dev) 
-##### Check out my videos of the builds and projects i've made over the time on [here](https://tiktok.com/@nnme.dev) 
 
 ## 🌟 Support 
-
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
 - 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
+##### If you have any questions regarding the project: [here](https://tiktok.com/@nnme.dev) 
 
 **Special thanks to the open-source pentesting community for protocol research and payload inspiration.**
 
