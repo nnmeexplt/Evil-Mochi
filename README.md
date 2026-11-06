@@ -157,9 +157,9 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 - **DISPLAY** – 0.96" I2C OLED display 128x64 (SSD1306)
 - **IR LED Trasmitter** – Either a generic IR trasmitter module or separate IR LEDs wired according to the schematic schematic below
 - **STATUS LED + 1x150Ω resistor** – Any red,green,blue led will work properly
+- **3x BUTTONS** – Any push button will do the job
 - **Resistors 3x10Ω/1x150Ω** – (Optional, needed only if you are following my IR schematic)
 - **transistors 1x NPN BJT** – (Optional, needed only if you are following my IR schematic)
-- - **3x BUTTONS** – Any push button will do the job
 >
 > Battery Components (Not neccessarily unless you are following my IR diagram or you simply want it)
 > 
@@ -170,7 +170,6 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 - **Alternatively, use a single module that integrates both as shown in my schematic below.**
 > [!WARNING]
 > If you are gonna charge a battery under 1000mAh please make sure to change the resistor with the appropiate value.
-
 
 ## 🔗 Connections Pinout      
 
@@ -217,26 +216,24 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 </div>
 
 I've created a webflasher to make it super easy for you to flash my firmware
-- Just Visit [Evil-Mochi Flasher](https://evilmochiflasher.pages.dev) and flash it with a click
-- Make sure you have a data USB cable and not charge-only.
+- Just Visit [Evil-Mochi Flasher](https://evilmochiflasher.pages.dev) 
+- Press `Install Firmware` and flash it, thats all you have to do.
+- Good luck, Have fun.
 
-### Flashing via binary files
-- Download the firmware `.bin` file available on this repository.
+### Flashing via binary files..
+- Download the firmware `.bin` file available on this repository
 - Use any flasher of your choice
 - Upload at 0x0 and flash
-- Thats it, good luck. Have fun.
 
 ## 📩 Contact
 - Portfolio: [nnmestore](https://nnmestore.pages.dev) 
-- Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev) 
-- Github:    [nnmeexplt](https://github.com/nnmeexplt)
-- Email:     nonametester@proton.me
+- Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev)
+- Email:   nonametester@proton.me
  
 ## 🌟 Support 
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
 - 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
-##### If you have any questions regarding the project: [here](https://tiktok.com/@nnme.dev) 
 
 **Special thanks to the open-source pentesting community for protocol research and payload inspiration.**
 
