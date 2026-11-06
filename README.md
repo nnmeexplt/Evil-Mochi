@@ -23,13 +23,11 @@
 &nbsp;
 <!-- About this Project -->
 # ABOUT THIS PROJECT
-Evil Mochi is a custom ESP32-C3 firmware made for wireless tools, pentesting, and general utilities. It supports Wi-Fi, Bluetooth, and IR functionality along with some games, with a 128×64 I²C OLED for the interface and a custom animated mochi that changes moods while on idle.
+Evil Mochi is a custom ESP32-C3 firmware designed for wireless tools, security testing, and general-purpose hardware utilities. It features Wi-Fi, Bluetooth, and IR functionality, alongside built-in games and a 128×64 I²C OLED display for an intuitive interface.
 
-Designed to bring wireless experimentation, security testing, and practical hardware utilities together in a compact, feature-rich platform. Combining offensive and defensive capabilities, it provides an accessible interface for exploring wireless technologies, testing security configurations, and interacting with compatible hardware in controlled environments.
+Combining offensive and defensive capabilities, Evil Mochi provides an accessible platform for enthusiasts, developers, and security researchers to explore wireless technologies, experiment with hardware, and test security configurations in controlled environments.
 
-Built for enthusiasts, developers, and security researchers, Evil Mochi offers a versatile platform for exploring hardware capabilities, experimenting with wireless technologies, and understanding both offensive techniques and defensive security practices.
-
-Beyond its technical functionality, Evil Mochi incorporates a distinctive visual identity through its custom animated Mochi companion. When the device is idle, Mochi displays expressive animations and changing moods, adding personality to the firmware while giving the interface a menu full of features.
+Beyond its technical features, Evil Mochi has a distinctive visual identity through its custom animated Mochi companion. When idle, Mochi displays expressive animations and changing moods, bringing personality to the interface and making the overall experience more engaging.
 
 > [!NOTE]
 > **Developed and tested on the ESP32-C3 SuperMini**, but works on any ESP32-C3 dev board with the same GPIO wiring.
@@ -211,13 +209,15 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 
 ### Via My Web Flasher (Easy)
 
-<div style="border: 1px solid #30363d; border-radius: 8px; padding: 12px; display: inline-block; background-color: #0d1117;">
-  <img src="https://github.com/user-attachments/assets/77a5a177-5a65-4149-86eb-2623d20a80a6" width="700" alt="Evil-Mochi Flasher" style="border-radius: 4px; display: block;">
-</div>
+<a href="https://evilmochiflasher.pages.dev" style="text-decoration: none; display: inline-block;">
+  <div style="border: 1px solid #30363d; border-radius: 8px; padding: 12px; display: inline-block; background-color: #0d1117;">
+    <img src="https://github.com/user-attachments/assets/77a5a177-5a65-4149-86eb-2623d20a80a6" width="700" alt="Evil-Mochi Flasher" style="border-radius: 4px; display: block;">
+  </div>
+</a>
 
 I've created a webflasher to make it super easy for you to flash my firmware
-- Just Visit [Evil-Mochi Flasher](https://evilmochiflasher.pages.dev) 
-- Press `Install Firmware` and flash it, thats all you have to do.
+- Visit [Evil-Mochi Flasher](https://evilmochiflasher.pages.dev) or click the **image**
+- Press `Install Firmware` and flash it, thats all.
 - Good luck, Have fun.
 
 ### Flashing via binary files..
