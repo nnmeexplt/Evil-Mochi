@@ -9,7 +9,7 @@
   <p align="center">
     <a href="https://github.com/nnmeexplt/evil-mochi"><img src="https://img.shields.io/static/v1?label=nnmeexplt&message=Evil-Mochi&color=880808&logo=github"/></a>
     <a href="https://github.com/nnmeexplt"><img src="https://img.shields.io/badge/Profile-333333?logo=refinedgithub&logoColor=black"/></a>
-    <img src="https://img.shields.io/badge/ESP32C3-Offensive%20%2B%20Defensive-880808?logo=espressif"/>
+    <a href="https://espressif.com/en/products/socs/esp32-c3"><img src="https://img.shields.io/badge/ESP32C3-Offensive%20%2B%20Defensive-880808?logo=espressif"/></a>
   </p>
 
   <p align="center">
@@ -146,7 +146,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | Temperature | Shows live the ESP's temperature in °C and °F |
 | Restart | Restart the device if you can't reach the physical RST button |
 | Wipe Data | Completely wipes data saved to NVS partition like settings,scores,etc |
-> Everything is saved to NVS so its not lost after a restart.
+> Everything is saved to NVS so its not lost after a reboot.
 
 </details>
 
@@ -167,13 +167,17 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 - **SWITCH** – Any on/off switch will work
 - **TP4056** – Make sure you get the charging module with battery protection which has 6 pads
 - **MT3608** – DC-DC Step-Up (Boost) Converter
-- #### Alternatively, use a single module that integrates both as shown in my schematic below.
+- **Alternatively, use a single module that integrates both as shown in my schematic below.**
 > [!WARNING]
-> If you are gonna charge a battery under 1kmAh please make sure to change the resistor with the appropiate value.
+> If you are gonna charge a battery under 1000mAh please make sure to change the resistor with the appropiate value.
 
-<br/>
 
-## 🔗 Connections Pinout          
+## 🔗 Connections Pinout      
+
+<img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
+
+> **Components Used:** ESP32C3SuperMini, OLED 0.96" Display 128x64 SSD1306, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs), 5x Resistors (2x150Ω/3x10Ω), 1x 2n2222 Transistor, 1x On/Off Switch, 1x Status LED and a 3.7v Li Po Battery + TP4056+Booster module
+
 ### • DISPLAY
 | Component | Pin |
 | :--- | :--- |
@@ -192,8 +196,6 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **Button DOWN** | GPIO 0 |  
 
 ### • Battery (Aditional) 
-**Set the boost converter output to 5V before connecting the ESP32.**
-
 | Component | Connects to | 
 | :--- | :--- | 
 | **Battery (+)** | Switch / Leg 1 | 
@@ -204,12 +206,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 | **Booster OUT+ (5V)** | ESP32 5V / VIN |
 | **Booster OUT− (GND)** | ESP32 GND |
 
-**Neccessary only if you are gonna use custom IR setup like my schematic and not a generic IR trasmitter module.**
-
-
-<img width="1002" height="716" alt="Schematic" src="https://github.com/user-attachments/assets/1b12f727-6605-4ecd-b517-6535a533ed52" />
-
-> **Components Used:** ESP32C3SuperMini, OLED 0.96" Display 128x64 ssd1306, 3x Tactile Push Buttons, 3x TSAL6200 (IR LEDs), 5x Resistors (2x150Ω/3x10Ω), 1x 2n2222 Transistor, 1x on/off switch, 1x Status LED and a 3.7v Li Po Battery + TP4056+Booster module
+**Neccessary only if you are gonna follow my schematic.**
 
 ## 🚀 Installation & Flashing
 
@@ -219,8 +216,9 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
   <img src="https://github.com/user-attachments/assets/77a5a177-5a65-4149-86eb-2623d20a80a6" width="700" alt="Evil-Mochi Flasher" style="border-radius: 4px; display: block;">
 </div>
 
-**I've created a webflasher to make it super easy for you to flash my firmware**
-- Just Visit **[Evil-Mochi Flasher](https://evilmochiflasher.pages.dev)** and flash, thats it.
+I've created a webflasher to make it super easy for you to flash my firmware
+- Just Visit [Evil-Mochi Flasher](https://evilmochiflasher.pages.dev) and flash it with a click
+- Make sure you have a data USB cable and not charge-only.
 
 ### Flashing via binary files
 - Download the firmware `.bin` file available on this repository.
@@ -233,8 +231,7 @@ Beyond its technical functionality, Evil Mochi incorporates a distinctive visual
 - Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev) 
 - Github:    [nnmeexplt](https://github.com/nnmeexplt)
 - Email:     nonametester@proton.me
-- paypal.me/nnmedev
-
+ 
 ## 🌟 Support 
 - 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
 - ⭐ Like the project? a star on the repo will make a big difference.
