@@ -1,0 +1,64 @@
+ // MADE BY nnmeexplt  // nnmestore.pages.dev           
+// TikTok:  @nnme.dev // github.com/nnmeexplt/evil-mochi  
+----------------------~_~--------------------------                                               
+################## FLASHING #######################
+|-------------------------------------------------|                
+|*EASY WAY                                        |                      
+|                                                 |
+|Visit: https://evilmochiflasher.pages.dev        |
+|                                                 |
+|Press (Install Firmware) and flash it, thats all | 
+|                                                 |                                               
+|-------------------------------------------------|
+|*BINARIES                                        |
+|                                                 |
+|Use any flasher of your choice                   |
+|                                                 |
+|Upload at 0x0 and flash                          |
+|                                                 |
+|-------------------------------------------------|
+
+
+################## CONNECTIONS ####################         
+|-------------------------------------------------|     
+### • DISPLAY                                     |
+|-------------------------------------------------|
+| Component      | PIN                            |
+|   VCC          | 3.3V                           | 
+|   GND          | GND                            |  
+|   SDA          | GPIO 8                         |  
+|   SCL          | GPIO 9                         | 
+|-------------------------------------------------| 
+
+|-------------------------------------------------|
+### • OTHERS                                      |                                      
+|-------------------------------------------------|
+| Component      | PIN                            | 
+|     IR LED     | GPIO 4                         | 
+|   Status LED   | GPIO 3 Through a 150Ω resistor |
+|   Button UP    | GPIO 2                         |     
+|   Button OK    | GPIO 1                         |  
+|   Button DOWN  | GPIO 0                         |  
+|                |                                | 
+|-------------------------------------------------|
+
+|-------------------------------------------------|
+### • BATTERY (OPTIONAL)                          |
+|-------------------------------------------------|                         
+| Component      | Connects to                    | 
+| **Battery (+)  | Switch / Leg 1                 | 
+| **Switch / Leg 2** | TP4056 BAT+                |
+| **Battery (−)** | TP4056 BAT−                   |
+| **TP4056 OUT+** | Booster IN+                   |  
+| **TP4056 OUT−** | Booster IN−                   |
+| **Booster OUT+ (5V)** | ESP32 5V / VIN          |
+| **Booster OUT− (GND)** | ESP32 GND              |
+---------------------------------------------------
+Neccessary only if you're gonna use a custom IR setup 
+like my schematic and not a generic trasmitter module.      
+
+------------------------~_~------------------------
+      Have fun. Take care. Respect the LAW.
+
+ // MADE BY nnmeexplt  // nnmestore.pages.dev           
+// TikTok:  @nnme.dev // github.com/nnmeexplt/evil-mochi 
