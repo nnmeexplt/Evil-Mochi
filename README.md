@@ -14,7 +14,7 @@
 
   <p align="center">
     <a href="https://tiktok.com/@nnme.dev"><img src="https://img.shields.io/badge/TikTok-000000?style=flat&logo=tiktok&logoColor=white"/></a>
-    <a href="https://nnmestore.pages.dev"><img src="https://img.shields.io/badge/Website-880808?logo=googlechrome&logoColor=black"/></a>
+    <a href="https://nnmestore.pages.dev"><img src="https://img.shields.io/badge/Portfolio-880808?logo=googlechrome&logoColor=black"/></a>
     <a href="https://github.com/nnmeexplt/blood-radar"><img src="https://img.shields.io/badge/Blood Radar-333333?logo=openstreetmap&logoColor=black"/></a>
   </p>
 
@@ -23,7 +23,7 @@
 &nbsp;
 <!-- About this Project -->
 # ABOUT THIS PROJECT
-Evil Mochi is a custom ESP32-C3 firmware designed for wireless tools, security testing, and general-purpose hardware utilities. It features Wi-Fi, Bluetooth, and IR functionality, alongside built-in games and a 128×64 I²C OLED display for an intuitive interface.
+Evil Mochi is a custom ESP32-C3 firmware designed for wireless tools, security testing, and general-purpose hardware utilities. It features Wi-Fi, Bluetooth,IR and ESP-NOW Chat, alongside built-in games and a 128×64 I²C OLED display for an intuitive interface.
 
 Combining offensive and defensive capabilities, Evil Mochi provides an accessible platform for enthusiasts, developers, and security researchers to explore wireless technologies, experiment with hardware, and test security configurations in controlled environments.
 
@@ -59,18 +59,24 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
     <img src="https://img.shields.io/badge/Wi Fi-880808?style=flat&logo=antenna&logoColor=white"/>
     <img src="https://img.shields.io/badge/Bluetooth-880808?style=flat&logo=antenna&logoColor=white"/>
     <img src="https://img.shields.io/badge/Infrared-880808?style=flat&logo=antenna&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Chat-880808?style=flat&logo=antenna&logoColor=white"/>
     <img src="https://img.shields.io/badge/Games-880808?style=flat&logo=antenna&logoColor=white"/>
+  
 </p>
 
 ## 📌 Features & Functionality
 <details>
-<summary><strong>📡 WIFI</strong></summary>
+<summary><strong>📡 WI-FI</strong></summary>
   
 | Tool | Description |
 |------|-------------|
 | Wi-Fi Scan | Full AP scan with SSID, BSSID, RSSI, and Channel |
-| Deauth Attacks | Deauth Flood (targets all scanned APs) and Deauth Select (pick one target) |
-| Captive Portal | Default "Free WiFi" portal and Evil Twin that logs captured credentials to the screen |
+| Deauth Flood | Floods every nearby AP scanned with deauth packets |
+| Deauth AP | Scan for nearby networks and deauth only one selected AP |
+| Deauth Client | Scan for nearby networks, pick an access point, then multi-select specific clients |
+| Deauth Evade | A more advanced deauth method that gets past basic router filters and "deauth immunity" |
+| Rogue AP | Features 5 well known HTML login pages, and you can edit Wi-Fi portal SSID |
+| Evil Twin | Scans for nearby networks, pick an access point then select HTML page |
 | Station Sniffer | Captures probe requests and data frames to see nearby phones/clients |
 | Beacon Spam | floods the surrounding area with fake SSIDs |
 | Packet Analyzer | Real-time live graph across all 16 channels |
@@ -84,9 +90,9 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
 | Tool | Description |
 |------|-------------|
 | BLE Scan | Lists nearby BLE devices, names, and RSSI |
-| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs ( probably the most optimized for esp32c3 around ) |
+| Beacon Spam | Floods the surrounding area with fake Bluetooth SSIDs ( probably the most optimized for the ESP32-C3 around ) |
 | Android Spam | Broadcasts FastPair payloads displaying unwanted pairing requests or action modals |
-| Bad BLE | 20 Highly optimized payloads for Android and Windows ( + you can change pairing beacon name as well ) |
+| Bad BLE | 20 Highly optimized payloads for Android and Windows ( + you can edit pairing beacon name as well ) |
 | BLE Radar | Tracks nearby BLE devices and shows device name, MAC address, RSSI, visual proximity meter, and total times seen |
 
 > **BLE Radar Distance**
@@ -102,8 +108,26 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
   
 | Tool | Description |
 |------|-------------|
-| TVBGONE | Turn off any TV, Features 140 EU and 137 NA codes with a custom power icon fill animation |
-> More coming soon                                                        
+| TVBG EU | Turn off almost any EU TV, Featuring 140 EU codes with custom power icon fill animation |
+| TVBG NA | Turn off almost any NA TV, Featuring 137 NA codes with custom power icon fill animation |
+| IR Jammer | Overloads IR receivers with continuous pulses, blocking valid remote commands. |
+| Universal | Universal IRBGONE specific for ACs, Audios, Fans, Leds, Projectors, and TVs |
+| TV Remote | (VOL, CH, MUTE, D-pad) for almost all TV brands in both EU and NA regions. |
+
+> **Universal Code database: AC (276), AUDIO (364), FAN (2), LED (2), PROJECTOR (70), TV (222) models**                                                       
+
+</details>
+
+<details>
+<summary><strong>💬 P2P CHAT</strong></summary>
+  
+| Tool | Description |
+|------|-------------|
+| Find Devices | Scan for nearby Evil Mochi devices and start a direct P2P chat connection |
+| Inbox | View your message conversations, and unread messages from other devices and reply as well |
+| Settings | Configure your P2P chat identity and check wireless details and protocol info |
+
+**P2P CHAT** Works with ESP-NOW Protocol and i combined it with ESP LRM(Long Range Mode) for a better chatting experience.
 
 </details>
 
@@ -122,13 +146,14 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
 <details>
 <summary><strong>🕹️ GAMES</strong></summary>
   
-| Games | Description |
+| Tool | Description |
 |------|-------------|
 | Snake | (G)old school nokia game |
 | Flappy | that stupid ass flying bird |
-| Dino | classic chrome dino game (I tried my best) |
+| Dino | classic no internet chrome browser dino game |
 | CarJack | endless lane dodging game, gets faster the longer you drive |
 | BBreaker | brick breaker game, pure arcade nostalgia |
+> **More games will come soon.**
 
 </details>
 
@@ -140,11 +165,12 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
 |------|-------------|
 | LED Status | Configure how bright you want your led indicator from 0 to 100% |
 | Invert Colors | Inverts the colors displayed on the screen, turning each color into its opposite |
+| Interface | 5 UI's themes for the Main Menu and 2 variations for the Sub-Menu as well |
 | Brightness | Adjusts how bright or dim your want your screen to appear |
 | Temperature | Shows live the ESP's temperature in °C and °F |
 | Restart | Restart the device if you can't reach the physical RST button |
 | Wipe Data | Completely wipes data saved to NVS partition like settings,scores,etc |
-> Everything is saved to NVS so its not lost after a reboot.
+> **Everything is saved to NVS so its not lost after a reboot.**
 
 </details>
 
@@ -231,7 +257,7 @@ I've created a webflasher to make it super easy for you to flash my firmware
 - Email:   nonametester@proton.me
  
 ## 🌟 Support 
-- 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues)
+- 💬 Found a bug or have a feature request? Open an [Issue](https://github.com/nnmeexplt/evil-mochi/issues) or dm me directly on [Here](https://tiktok.com/@nnme.dev)
 - ⭐ Like the project? a star on the repo will make a big difference.
 - 🤝 Want to see more projects like this? Drop a follow, it means a lot and keeps me motivated.
 
