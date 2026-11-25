@@ -127,8 +127,6 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
 | Inbox | View your message conversations, and unread messages from other devices and reply as well |
 | Settings | Configure your P2P chat identity and check wireless details and protocol info |
 
-**P2P CHAT** Works with ESP-NOW Protocol and i combined it with ESP LRM(Long Range Mode) for a better chatting experience.
-
 </details>
 
 <details>
