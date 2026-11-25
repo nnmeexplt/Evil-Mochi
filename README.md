@@ -163,7 +163,7 @@ Beyond its technical features, Evil Mochi has a distinctive visual identity thro
 |------|-------------|
 | LED Status | Configure how bright you want your led indicator from 0 to 100% |
 | Invert Colors | Inverts the colors displayed on the screen, turning each color into its opposite |
-| Interface | 5 UI's themes for the Main Menu and 2 variations for the Sub-Menu as well |
+| Interface | 4 UI's themes for the Main Menu and 2 variations for the Sub-Menu as well |
 | Brightness | Adjusts how bright or dim your want your screen to appear |
 | Temperature | Shows live the ESP's temperature in °C and °F |
 | Restart | Restart the device if you can't reach the physical RST button |
