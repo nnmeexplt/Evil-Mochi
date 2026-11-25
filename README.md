@@ -251,6 +251,9 @@ I've created a webflasher to make it super easy for you to flash my firmware
 - Use any flasher of your choice
 - Upload at 0x0 and flash
 
+> [!TIP]
+> **After installing, go to **CONFIG → WIPE DATA** and select it once to start fresh.**
+
 ## 📩 Contact
 - Portfolio: [nnmestore](https://nnmestore.pages.dev) 
 - Tiktok:  [@nnme.dev](https://tiktok.com/@nnme.dev)
